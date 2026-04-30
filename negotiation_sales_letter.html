@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Negotiation Skills Sales Letter</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.75;
+    font-size: 16px;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: #c0000a;
+    padding: 64px 56px 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+  .hero-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #ffb3b3;
+    background: rgba(255,255,255,0.12);
+    padding: 6px 14px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.12;
+    margin-bottom: 20px;
+    max-width: 620px;
+  }
+  .hero h1 span { color: #ffd4d4; }
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.82);
+    max-width: 540px;
+    line-height: 1.7;
+  }
+
+  /* ── META STRIP ── */
+  .meta-strip {
+    background: #1a1a1a;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .meta-item {
+    flex: 1;
+    min-width: 160px;
+    padding: 18px 24px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    color: #fff;
+  }
+  .meta-item:last-child { border-right: none; }
+  .meta-item .label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 4px; }
+  .meta-item .value { font-size: 15px; font-weight: 600; color: #fff; }
+  .meta-item .value.red { color: #ff6b6b; }
+
+  /* ── BODY SECTIONS ── */
+  .body { padding: 52px 56px; }
+
+  .section { margin-bottom: 44px; }
+
+  .hook {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #c0000a;
+    line-height: 1.45;
+    margin-bottom: 20px;
+  }
+
+  p { margin-bottom: 16px; color: #333; font-size: 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: #c0000a;
+    margin: 36px 0;
+    border-radius: 2px;
+  }
+
+  /* ── SECTION HEADING ── */
+  .sec-head {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+  }
+
+  /* ── BENEFIT GRID ── */
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .benefit-card {
+    background: #fdf5f5;
+    border: 1px solid #f0d0d0;
+    border-radius: 8px;
+    padding: 20px 22px;
+  }
+  .benefit-card .icon {
+    width: 36px; height: 36px;
+    background: #c0000a;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 12px;
+  }
+  .benefit-card .icon svg { width: 18px; height: 18px; }
+  .benefit-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .benefit-card p {
+    font-size: 13.5px;
+    color: #555;
+    margin: 0;
+  }
+
+  /* ── ONE-ON-ONE SPOTLIGHT ── */
+  .spotlight {
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 36px 40px;
+    position: relative;
+    overflow: hidden;
+    margin: 36px 0;
+  }
+  .spotlight::after {
+    content: '1:1';
+    position: absolute;
+    right: -10px; top: -20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .spotlight .pill {
+    display: inline-block;
+    background: #c0000a;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+    margin-bottom: 18px;
+  }
+  .spotlight h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .spotlight p { color: rgba(255,255,255,0.72); font-size: 15px; }
+
+  /* ── AUDIENCE ── */
+  .audience-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .audience-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 12px 16px;
+  }
+  .audience-list li::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #c0000a;
+    flex-shrink: 0;
+  }
+
+  /* ── OBJECTION HANDLER ── */
+  .objection-item {
+    border-left: 3px solid #c0000a;
+    padding: 10px 0 10px 20px;
+    margin-bottom: 18px;
+  }
+  .objection-item .q {
+    font-weight: 600;
+    font-size: 14.5px;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .objection-item .a {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+  }
+
+  /* ── URGENCY ── */
+  .urgency-box {
+    background: #fff8f8;
+    border: 1.5px solid #f0c0c0;
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin: 36px 0;
+  }
+  .urgency-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #c0000a;
+    margin-bottom: 12px;
+  }
+  .urgency-box ul {
+    padding-left: 18px;
+    color: #444;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  /* ── ACRO BOX ── */
+  .acro-box {
+    background: #c0000a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 32px 40px;
+    margin: 36px 0;
+  }
+  .acro-box h3 {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 20px;
+  }
+  .acro-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .acro-row .letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.25);
+    line-height: 1;
+    width: 32px;
+    flex-shrink: 0;
+  }
+  .acro-row .word {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 4px;
+    line-height: 1.4;
+  }
+  .acro-row .word span {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* ── CREDIBILITY ── */
+  .cred-strip {
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 24px 28px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin: 36px 0;
+    flex-wrap: wrap;
+  }
+  .cred-stat { text-align: center; flex: 1; min-width: 100px; }
+  .cred-stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #c0000a;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .cred-stat .desc { font-size: 12px; color: #777; }
+
+  /* ── PRICE / CTA ── */
+  .cta-section {
+    background: #1a1a1a;
+    padding: 52px 56px;
+    text-align: center;
+  }
+  .cta-section .price-label { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+  .cta-section .price {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .cta-section .price-note { font-size: 13px; color: #666; margin-bottom: 28px; }
+  .cta-btn {
+    display: inline-block;
+    background: #c0000a;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 18px 52px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+    margin-bottom: 16px;
+  }
+  .cta-btn:hover { background: #a0000a; }
+  .cta-guarantee { font-size: 13px; color: #666; margin-top: 14px; }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 28px 56px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer p { font-size: 12.5px; color: #999; margin: 0; }
+
+  @media (max-width: 600px) {
+    .hero, .body, .cta-section, .footer { padding-left: 28px; padding-right: 28px; }
+    .benefit-grid, .audience-list { grid-template-columns: 1fr; }
+    .cred-strip { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-label">Live Masterclass &middot; Limited Access</div>
+    <h1>Stop Leaving Money on the Table. <span>Master the Art of Negotiation.</span></h1>
+    <p class="hero-sub">The one skill separating thriving businesses from stagnant ones — and most founders have never been taught it properly. That changes on 15 May.</p>
+  </div>
+
+  <!-- META STRIP -->
+  <div class="meta-strip">
+    <div class="meta-item">
+      <div class="label">Date</div>
+      <div class="value">Friday, 15 May</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Format</div>
+      <div class="value">Live · Google Meet</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Investment</div>
+      <div class="value red">$100</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Bonus</div>
+      <div class="value">3-Month Mentorship</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- OPENING HOOK -->
+    <div class="section">
+      <p class="hook">"Every deal you've hesitated on, every contract you undersigned, every partnership that fell apart — it all comes back to one thing: negotiation."</p>
+
+      <p>You already know your industry. You've put in the work. But somewhere between a great idea and a great outcome, deals stall. Partnerships don't close. Conversations end in "I'll think about it."</p>
+
+      <p>The problem isn't your product. It's not your pitch deck. And it certainly isn't your market. It's that nobody ever taught you how to <strong>negotiate with confidence, clarity, and strategy</strong> — until now.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- WHAT YOU'LL MASTER -->
+    <div class="section">
+      <h2 class="sec-head">What Negotiation SKILLS That Work 99.9% of the Time Will Give You</h2>
+      <p>This isn't a theory lecture. This is a live, interactive masterclass built around one obsessive goal: your results. Here is what you walk away with:</p>
+
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>A complete negotiation framework</h4>
+          <p>Plug-and-play strategies you can deploy in your next deal — no guesswork, no winging it.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h4>Revenue-protecting language</h4>
+          <p>Specific phrases and counters that shift negotiating power in your favour, fast.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Boardroom-ready confidence</h4>
+          <p>Walk into investor meetings, partnership calls, and client pitches without flinching at the numbers.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h4>Scalable deal-closing habits</h4>
+          <p>Systems and mindsets that compound — every negotiation you win teaches you to win the next one bigger.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACRONYM -->
+    <div class="acro-box">
+      <h3>What N.I.K.S.E.I means for your business</h3>
+      <div class="acro-row"><div class="letter">N</div><div class="word">Knowledge <span>Know what you're worth — and prove it in the room.</span></div></div>
+      <div class="acro-row"><div class="letter">I</div><div class="word">Involves <span>Every stakeholder, every variable — mapped and accounted for.</span></div></div>
+      <div class="acro-row"><div class="letter">K</div><div class="word">Knowledge <span>Industry depth that commands respect and drives terms.</span></div></div>
+      <div class="acro-row"><div class="letter">S</div><div class="word">Skills <span>Practised, repeatable techniques that hold under pressure.</span></div></div>
+      <div class="acro-row"><div class="letter">E</div><div class="word">Experience <span>Battle-tested insight from real negotiations, not textbooks.</span></div></div>
+      <div class="acro-row"><div class="letter">I</div><div class="word">Intuition <span>Reading the room and pivoting in real time — the elite edge.</span></div></div>
+    </div>
+
+    <!-- 1-ON-1 SPOTLIGHT -->
+    <div class="spotlight">
+      <div class="pill">Core differentiator</div>
+      <h3>Your Private 1-on-1 Business Strategy Session</h3>
+      <p>Beyond the masterclass, you get direct, personal access. A dedicated one-on-one session with our expert to map your specific business challenges, current deals in play, and negotiation blind spots — and build a strategy tailored entirely around <em>your</em> context.</p>
+      <p style="margin-top: 12px;">Not a group Q&amp;A. Not a forum thread. A real conversation about your real business. This alone is worth multiples of the ticket price.</p>
+    </div>
+
+    <!-- WHO THIS IS FOR -->
+    <div class="section">
+      <h2 class="sec-head">This masterclass is for you if you are a —</h2>
+      <ul class="audience-list">
+        <li>Investor</li>
+        <li>Business Owner</li>
+        <li>Entrepreneur</li>
+        <li>Startup Founder</li>
+      </ul>
+      <p style="margin-top: 18px; font-size: 15px; color: #555;">In short: if growth, revenue, and strategic advantage matter to you — this session was designed specifically around your world.</p>
+    </div>
+
+    <!-- CREDIBILITY -->
+    <div class="cred-strip">
+      <div class="cred-stat">
+        <div class="num">300K+</div>
+        <div class="desc">Community of professionals led by Josephine Ndianabasi</div>
+      </div>
+      <div class="cred-stat">
+        <div class="num">99.9%</div>
+        <div class="desc">Success rate on negotiation frameworks taught in this programme</div>
+      </div>
+      <div class="cred-stat">
+        <div class="num">3 Mo.</div>
+        <div class="desc">Exclusive mentorship included with every registration</div>
+      </div>
+    </div>
+
+    <!-- URGENCY -->
+    <div class="urgency-box">
+      <h3>Why you cannot afford to wait on this</h3>
+      <ul>
+        <li>This is a <strong>live, interactive session</strong> — it will not be replicated with the same access or energy</li>
+        <li>Slots are <strong>strictly limited</strong> to protect the quality of the 1-on-1 strategy sessions</li>
+        <li>The <strong>3-month mentorship programme</strong> is an exclusive bonus available only to registered attendees</li>
+        <li>Once the date passes, this opportunity — at this price — closes permanently</li>
+      </ul>
+    </div>
+
+    <!-- OBJECTIONS -->
+    <div class="section">
+      <h2 class="sec-head">A few honest answers before you decide</h2>
+
+      <div class="objection-item">
+        <div class="q">"Is $100 really worth it?"</div>
+        <div class="a">A single negotiation win — one better deal, one contract signed at your actual rate — will return this investment many times over. You're not paying for information; you're investing in outcomes.</div>
+      </div>
+
+      <div class="objection-item">
+        <div class="q">"I'm busy. Will I actually have time?"</div>
+        <div class="a">This masterclass is designed to be high-density and time-efficient. Everything taught is immediately applicable. One Friday. Permanent returns.</div>
+      </div>
+
+      <div class="objection-item">
+        <div class="q">"Will this actually work for my industry?"</div>
+        <div class="a">Negotiation is a universal skill. Whether you're closing a ₦50M investment round or a $10,000 brand deal, the principles are identical. The frameworks adapt — the results don't.</div>
+      </div>
+
+      <div class="objection-item">
+        <div class="q">"Can't I just find this on YouTube?"</div>
+        <div class="a">Freely available content gives you theory. This gives you a live expert, a personalised strategy session, three months of mentorship, and a community of peers doing exactly what you're doing. That is a different category of value.</div>
+      </div>
+    </div>
+
+    <!-- SPECIAL GUESTS -->
+    <div class="section">
+      <h2 class="sec-head">Hosted with special guests</h2>
+      <p>Joining Josephine Ndianabasi on the session are <strong>John Iyongo</strong> and <strong>Kelvin Akula</strong> — practitioners who bring additional depth, perspective, and lived experience to a room already full of insight.</p>
+      <p>This is not a panel of speakers reading slides at you. This is a room of experts who have negotiated, won, lost, and learned — sharing what actually works.</p>
+    </div>
+
+  </div><!-- end body -->
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <p class="price-label">One-time investment</p>
+    <div class="price">$100</div>
+    <p class="price-note">Includes: Live Masterclass · 1-on-1 Strategy Session · 3-Month Mentorship · Exclusive Bonus Access</p>
+    <br>
+    <a class="cta-btn" href="#">Secure Your Spot — Register Now on Selar</a>
+    <p class="cta-guarantee">Click the Selar.co link provided alongside this offer to complete your registration.<br>Limited slots available. No refund policy applies.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Negotiation SKILLS That Work 99.9% of the Time &mdash; Friday, 15 May &middot; Google Meet</p>
+    <p>Powered by Selar.co</p>
+  </div>
+
+</div>
+</body>
+</html>
